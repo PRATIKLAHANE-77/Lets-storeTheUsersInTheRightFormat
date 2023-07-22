@@ -1,0 +1,79 @@
+<!-- <script>
+    let myobj = {
+      name: "pratik",
+      age: 23
+    };
+  
+    // localStorage.setItem('name', myobj);
+    // console.log(localStorage);
+
+    // making into string
+    let myobj_serialized = JSON.stringify(myobj); // Corrected JSON serialization
+    localStorage.setItem('name', myobj_serialized);
+    console.log(myobj_serialized);
+
+    // string into object
+
+    let myobj_deserialized = JSON.parse(localStorage.getItem('name'));
+    console.log(myobj_deserialized);
+  </script>
+   -->
+
+   <!-- https://source.unsplash.com/900x900/?nature,water -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <style>
+        button {
+          width: 1010px;
+          height: 20px; 
+          font-size: 15px;
+          background: darkorange;
+        }
+      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  onsubmit="registeruser(event)">
+        <h1><center>Book a call</center></h1>
+        <h2><center>Book a call slot and our representative will call you within 1hr of selelected time</center></h2>
+        <hr>
+       <label><b><center>Name</center></b></label>
+        <center><input type="text" name="name" id="name" style="width: 1000px;" required /></center>
+       <center><label><b>Email</b></label><br></center>
+       <center> <input type = "text" name="email" id="email" style="width: 1000px;" required/></center>
+     <center> <label><b>Phone</b></label><br></center>
+        <center><input type="text" name="phone" style="width:1000px" required/><br><br></center>
+       <center> <label for="date"><b>Time for call:</b></label></center>
+       <center><input type="date" id="date" name="date" style="width:500px;"><input type="time" id="time" name="time" style="width:500px;"><br><br></center>
+       <center><button>GET A CALL</button></center>
+       <!-- <input type="submit" value="Get A call" -->
+    </form>
+
+    <script>
+        function registeruser(event) {
+          event.preventDefault();
+          let myobj = {
+            name:"pratik",
+            email:"pratik.lahane1999@gmail.com",
+            phone:7350358965,
+            time_for_call: "3:00"
+          }
+          localStorage.setItem('info',JSON.stringify(myobj));
+        }
+
+
+
+
+    </script>
+
+   
+    
+
+
+</body>
+</html>
