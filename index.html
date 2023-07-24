@@ -64,6 +64,12 @@
             time_for_call: "3:00"
           }
                    localStorage.setItem(myobj.Name,JSON.stringify(myobj));
+             document.getElementById('deleteButton').addEventListener('click', deleteUserData);
+          function deleteUserData(event) {
+          event.preventDefault();
+          localStorage.removeItem(myobj.Name); 
+
+        }
 
         }
 
